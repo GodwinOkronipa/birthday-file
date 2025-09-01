@@ -131,6 +131,16 @@
     <div class="min-h-screen flex flex-col items-center justify-center text-center p-6 fade-in">
         <h1 class="text-5xl md:text-7xl font-bold text-[#d81b60] mb-4">Happy 17th Birthday,</h1>
         <h2 class="cursive text-6xl md:text-8xl text-[#e91e63] mb-8">Angel!</h2>
+        <div class="mb-8">
+            <div class="mx-auto w-40 h-40 md:w-56 md:h-56 rounded-full ring-4 ring-pink-200 shadow-xl overflow-hidden">
+                <img
+                    src="./WhatsApp Image 2025-09-01 at 00.51.34_e5f18318.jpg"
+                    alt="Portrait of Angel"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                />
+            </div>
+        </div>
         <p class="text-xl text-gray-600">You make the world a more beautiful place.</p>
         <div class="absolute bottom-10 text-4xl mt-6 scroll-arrow text-[#f06292]">⬇</div>
     </div>
@@ -222,11 +232,11 @@
                 particle.classList.add('particle');
                 
                 particle.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
-                particle.style.left = ${Math.random() * 100}%;
-                particle.style.animationDelay = ${Math.random() * 15}s;
-                particle.style.animationDuration = ${Math.random() * 10 + 10}s;
-                particle.style.opacity = Math.random() * 0.5 + 0.2;
-                particle.style.transform = scale(${Math.random() * 0.5 + 0.5});
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.animationDelay = `${Math.random() * 15}s`;
+                particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                particle.style.opacity = (Math.random() * 0.5 + 0.2).toString();
+                particle.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
 
 
                 container.appendChild(particle);
