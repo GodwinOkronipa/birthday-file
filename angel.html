@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 17th Birthday, Angel!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fffafb;
+            color: #5c5c5c;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .cursive {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .section-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 4rem;
+            border: 1px solid #fce4ec;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        .section-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .section-card.visible .card-content {
+             opacity: 1;
+             transform: translateY(0);
+             transition-delay: 0.3s;
+        }
+        
+        .card-content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .scroll-arrow {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        
+        .particle-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            font-size: 20px;
+            color: #f8bbd0;
+            animation: rise 15s infinite linear;
+            opacity: 0;
+            text-shadow: 0 0 10px #ffffff;
+        }
+        
+        @keyframes rise {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .growing-flower {
+            font-size: 5rem;
+            color: #e91e63;
+            animation: grow 4s ease-in-out forwards;
+            display: inline-block;
+            transform-origin: bottom;
+            opacity: 0;
+        }
+        
+        @keyframes grow {
+            0% { transform: scale(0.1); opacity: 0;}
+            50% { transform: scale(1.1); opacity: 1;}
+            100% { transform: scale(1); opacity: 1;}
+        }
+
+    </style>
+</head>
+<body class="bg-gradient-to-b from-[#fff5f7] via-[#fffafb] to-white">
+
+    <div class="particle-container" id="flower-container"></div>
+
+    <div class="min-h-screen flex flex-col items-center justify-center text-center p-6 fade-in">
+        <h1 class="text-5xl md:text-7xl font-bold text-[#d81b60] mb-4">Happy 17th Birthday,</h1>
+        <h2 class="cursive text-6xl md:text-8xl text-[#e91e63] mb-8">Angel!</h2>
+        <p class="text-xl text-gray-600">You make the world a more beautiful place.</p>
+        <div class="absolute bottom-10 text-4xl mt-6 scroll-arrow text-[#f06292]">⬇</div>
+    </div>
+
+    <div class="container mx-auto px-6 py-12 max-w-2xl">
+
+        <!-- Section 1: Birthday Wishes -->
+        <div class="section-card">
+            <div class="card-content">
+                <h3 class="text-3xl font-bold text-[#c2185b] mb-4">Birthday Wishes 🎂</h3>
+                <p class="text-lg leading-relaxed">
+                    Happy birthday, Angel! I feel so incredibly lucky to celebrate this day with you. You have such a wonderful heart, and I'm grateful for every moment we get to share.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 2: Memories -->
+        <div class="section-card">
+            <div class="card-content">
+                <h3 class="text-3xl font-bold text-[#c2185b] mb-4">Our Moments 💖</h3>
+                <p class="text-lg leading-relaxed">
+                    Thinking about all the times we've shared, the laughs and even the small, quiet moments... they all mean so much to me. Being with you is always the best part of my day.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 3: Dreams and Wishes -->
+        <div class="section-card">
+            <div class="card-content">
+                <h3 class="text-3xl font-bold text-[#c2185b] mb-4">Your Bright Future 🌟</h3>
+                <p class="text-lg leading-relaxed">
+                    On your special day, I wish you all the happiness in the world. May you achieve all your dreams, big and small, and may your heart always be filled with joy and love. You deserve it all.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 4: Love and Gratitude -->
+        <div class="section-card">
+            <div class="card-content">
+                <h3 class="text-3xl font-bold text-[#c2185b] mb-4">An Amazing Person ✨</h3>
+                <p class="text-lg leading-relaxed">
+                   I just want to say thank you for being you. You're such a kind, strong, and amazing person, and I'm so glad to have you in my life. You inspire me.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Section 5: What's Next -->
+        <div class="section-card text-center">
+            <div class="card-content">
+                <h3 class="text-3xl font-bold text-[#c2185b] mb-4">Here's to New Adventures 🌸</h3>
+                <p class="text-lg leading-relaxed mb-6">
+                    I'm so excited to see what the future holds for you, and I can't wait to make more amazing memories together.
+                </p>
+                <div class="growing-flower">🌷</div>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer class="text-center p-8 text-gray-500">
+        <p class="cursive text-2xl">With love, Exornam</p>
+    </footer>
+
+    <script>
+        // Animate sections on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: unobserve after first intersection
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.25 // Trigger when 25% of the element is visible
+        });
+
+        document.querySelectorAll('.section-card').forEach(card => {
+            observer.observe(card);
+        });
+        
+        // Particle generators
+        function createParticles(containerId, count) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            const flowers = ['🌸', '🌷', '💮', '✨'];
+            for (let i = 0; i < count; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                particle.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+                particle.style.left = ${Math.random() * 100}%;
+                particle.style.animationDelay = ${Math.random() * 15}s;
+                particle.style.animationDuration = ${Math.random() * 10 + 10}s;
+                particle.style.opacity = Math.random() * 0.5 + 0.2;
+                particle.style.transform = scale(${Math.random() * 0.5 + 0.5});
+
+
+                container.appendChild(particle);
+            }
+        }
+        
+        createParticles('flower-container', 30);
+
+    </script>
+</body>
+</html>
